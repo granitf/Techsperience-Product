@@ -1,0 +1,84 @@
+<% include partials/header %>
+
+<div id="container">
+ 
+
+<form class="form-group" method="POST" action="/documents/update/<%= doc._id %>" style="border:1px solid #ccc">
+  <div class="container">  <h1>Forma e Regjistrimit</h1>
+    <p>Digjitalizimi i Dokumenteve</p>
+    <br>
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <label><b>Autori</b></label><br>
+            <input type="text" placeholder="Emri i Autorit" value="<%=doc.author%>" name="author" class="form-control" required><br>
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            
+        <label><b>Numri i Dokumeniti</b></label><br>
+        <input type="text" placeholder="Shëno numrin e dokumeniti" value="<%=doc.nr%>" name="nr" class="form-control" required><br>
+
+        </div>
+        
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <label><b>Titulli i Dokumentit</b></label><br>
+    <input type="text" placeholder=" Shëno titullin e dokumentit" value="<%=doc.title%>" name="title" class="form-control" required><br>
+
+
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <label><b>Lokacioni Fizik</b></label><br>
+            <input type="text" placeholder="Vendi ku gjendet dokumenti" value="<%=doc.location%>" name="location"  class="form-control" required><br>      
+
+        </div>
+        
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+              <label><b>Përshkruaj  dokumentin</b></label><br>
+              <textarea name="description" class="form-control"  rows="3" cols="50em" class="form-control" required><%=doc.description%></textarea><br>
+        </div>
+        
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+        <label><b>Image source</b></label><br>
+        <input class="form-control" type="text"  value="<%=doc.source%>" name="image" placeholder="Paste your image link here" required><br>
+
+        </div>
+        
+    </div>
+  
+
+</div>
+
+    <div class="clearfix">
+      <a href="/"><button type="button" class="btn btn-danger">Anulo</button></a>
+      <button type="submit" class="btn btn-success">Regjistro Dokumentin</button>
+    </div>
+
+
+
+</form>
+
+    <script src="/js/main.js"></script>
+
+
+
+<% include partials/footer %>

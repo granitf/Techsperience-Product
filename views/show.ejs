@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+
+<div class ="container">
+
+<h3>Document:</h3>
+
+<h2>Titile:<%=doc.title%></h2>
+<p>Number:<%=doc.nr%></p>
+<p>Location:<%=doc.location%></p>
+<p>Description:<%=doc.description%></p>
+<p>Author:<%=doc.author%></p>
+<p>Image:</p>
+<img  src="<%= doc.source %>" class="img-responsive" alt="Document images" >
+
+</div>
+
+<% include partials/footer %>

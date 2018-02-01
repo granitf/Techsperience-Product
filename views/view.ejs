@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<div class="container">
+    <a href="documents" class="btn btn-primary btn-lg active" role="button">Add a Document</a>
+  <h1><b>List of All Documents</b></h1>
+  <table class="table table-bordered table-responsive" >
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Number</th>
+                    <th>Location</th>
+                    <th>Author</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% docs.map(function(doc) {    %>
+                    <tr>
+                        <td><%= doc.title %> </td>
+                        <td><%=doc.nr  %> </td> 
+                        <td><%=doc.location  %> </td> 
+                        <td><%=doc.author  %> </td> 
+                        <td> &nbsp
+                         <a href="/documents/<%= doc._id %>">Show</a> &nbsp
+                         <a href="/documents/edit/<%= doc._id %>">Edit</a>&nbsp
+                         <a href="/documents/delete/<%= doc._id %>">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+  </table>  
+
+</div>
+
+<% include partials/footer %>
